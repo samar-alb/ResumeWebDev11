@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    font-family: "Tajawal", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 50%), url('forback.png');
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    min-height: 150vh;
+}
+
+
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover {
+    color: #b9b9b9;
+}
+
+
+
+
+/* Content below the navbar */
+.content {
+    padding-top: 80px; /* Add padding to avoid content overlap with navbar */
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.personal-info,
+section {
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #e6e9ea;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: left;
+}
+
+h2, h3 {
+    color: #e6e9ea;
+    margin-bottom: 10px;
+}
+
+/* .contact-info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon img {
+    width: 30px;
+    height: auto;
+    margin-right: 15px;
+    transition: filter 0.3s ease;
+}
+
+.social-icon:hover {
+    filter: grayscale(100%);
+    transform: scale(1.1);
+    opacity: 0.8;
+} */
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .content {
+        max-width: 90%; /* Adjust content width for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px;
+    }
+
+    .menu {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    ul {
+        justify-content: flex-start;
+    }
+
+    .logo {
+        padding-left: 10px;
+    }
+
+    .content {
+        padding-top: 150px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .hamburger {
+        display: block; /* Show hamburger menu on small screens */
+    }
+
+    .menu {
+        display: none; /* Hide menu by default on small screens */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .content {
+        padding-top: 120px; /* Adjust padding for very small screens */
+    }
+
+    h2, h3 {
+        font-size: 1.5rem; /* Reduce font size for smaller screens */
+    }
+
+    .personal-info, section {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+}
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px ;
+}
+
+footer h2 {
+    color: white;
+    padding-bottom: 10px;
+}
+
+footer p, footer p a {
+    color: white;
+}
+
+footer a {
+    display: inline-block; 
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+
+}
+footer a:hover {
+    color: #b9b9b9; /* Change color on hover */
+    transform: scale(1.05); /* Slightly enlarge the link on hover */
+}
+/* Existing CSS code... */
+
+footer a img {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+footer a img:hover {
+    transform: scale(1.1); /* Enlarge the icon by 10% */
+    opacity: 0.8; /* Slightly reduce opacity on hover */
+}

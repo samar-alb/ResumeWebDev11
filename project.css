@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    font-family: "Tajawal", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    padding-top: 80px; /* Adjust this value based on the height of your NavBar */
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.main {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 50%), url('forback.png');
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    min-height: 150vh;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover {
+    color: #b9b9b9;
+}
+
+/* Projects Section */
+#projects {
+    padding-top: 100px; /* Add padding to avoid content overlap with navbar */
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #e6e9ea; /* Text color */
+}
+
+#projects h2 {
+    margin-bottom: 40px; /* Add space below "My Projects" heading */
+    margin-top: 1px;
+    color: #9a9e9f;
+}
+
+.project {
+    margin-bottom: 80px; /* Space between projects */
+    background: rgba(0, 0, 0, 0.5); /* Background for contrast */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    margin-bottom: 30px; /* Space below project title */
+}
+
+.project-images {
+    display: flex; /* Display images in a row */
+    justify-content: space-between; /* Space evenly */
+    margin-top: 40px; /* Space above images */
+    gap: 9px; /* Space between images */
+    padding: 20px; /* Add padding around the images inside the box */
+    background: rgba(0, 0, 0, 0); /* Background for the box */
+    border-radius: 8px; /* Rounded corners for the box */
+    flex-wrap: nowrap; /* Prevent wrapping to ensure images stay in one row */
+}
+
+.project-images img {
+    width: 30%; /* Adjust width of images */
+    border-radius: 8px; /* Rounded corners for images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    margin-bottom: 10px; /* Add space below images when they stack */
+}
+
+.project-images img:hover {
+    transform: scale(1.1); /* Enlarge the image by 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #e6e9ea;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.project a:hover {
+    color: #b9b9b9;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .project-images img {
+        width: 45%; /* Adjust image width for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px;
+    }
+
+    .menu {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    ul {
+        justify-content: flex-start;
+    }
+
+    .logo {
+        padding-left: 10px;
+    }
+
+    #projects {
+        padding-top: 150px; /* Adjust padding for smaller screens */
+    }
+
+    .project-images {
+        flex-direction: column; /* Stack images vertically on small screens */
+        gap: 10px;
+    }
+
+    .project-images img {
+        width: 100%; /* Full width for images on small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .hamburger {
+        display: block; /* Show hamburger menu on small screens */
+    }
+
+    .menu {
+        display: none; /* Hide menu by default on small screens */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    #projects {
+        padding-top: 120px; /* Adjust padding for very small screens */
+    }
+
+    h2, h3 {
+        font-size: 1.5rem; /* Reduce font size for smaller screens */
+    }
+
+    .project {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+footer h2 {
+    color: white;
+    padding-bottom: 10px;
+}
+
+footer p, footer p a {
+    color: white;
+}
+
+footer a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+    color: #b9b9b9; /* Change color on hover */
+    transform: scale(1.05); /* Slightly enlarge the link on hover */
+}
+
+footer a img {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+footer a img:hover {
+    transform: scale(1.1); /* Enlarge the icon by 10% */
+    opacity: 0.8; /* Slightly reduce opacity on hover */
+}
